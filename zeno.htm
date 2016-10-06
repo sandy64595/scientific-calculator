@@ -1,0 +1,188 @@
+<html>
+ <head>
+
+    <title>SCIENTIFIC CALCULATOR</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+   
+
+        <!--CSS-->
+     <link href="oscZeno.css" rel="stylesheet" type="text/css" />
+
+     <!--LINK TO jQUERY LIB-->
+    <script type="text/javascript" 
+        src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js">
+    </script>
+
+     <!--CALCULATOR SCRIPT-->
+     <script src="oscZenoRef.js" type="text/javascript"></script>
+     <script src="oscZeno.js" type="text/javascript"></script>
+ </head>
+
+ <body>
+   
+   <!--ADDED FOR OLDER IE PARTIAL COMPATIBILITY-->
+    <!--[if !IE]><!--><div class="oscCenterColumn"><!--<![endif]-->
+   <!--[if IE 9]><div class="oscCenterColumn"><![endif]-->
+   <!--[if IE 8]><div id="ie" class="oscCenterColumn"><![endif]-->
+   <!--[if IE 7]><div id="ie" class="oscCenterColumn"><![endif]-->
+   <!--[if lte IE 6]><div id="ie" class="oscCenterColumn"><![endif]-->
+   	    
+   	    <div class = "oscMain">
+      	    <header>
+                <div class="oscTitle">SCIENTIFIC CALCULATOR</div>
+               <!-- <div class="oscModel">ZENO-5000</div>-->
+
+            </header>
+            <div class="oscSpacer5"></div>
+            <div class="oscSpacer5"></div>
+
+            <div class="keys_ToRight">
+			    <div class="oscExtControl">&#9660;</div>
+                <div class="oscStackControl">R</div>
+		    </div>
+         
+            <div class="oscSpacer5"></div>
+            <div class="oscSpacer3"></div>
+     	
+	        <div id="keyPad">
+		        <!--USER INPUT-->
+		        <div class="keys_ToRight">
+			        <button id="keyPad_btnToMem" class="keyPad_btnMemOp">&#8681</button>
+                    <button id="keyPad_btnFromMem" class="keyPad_btnMemOp">&#8679</button>
+		        </div>
+                <div class="oscStackRegister">STACK</div>
+        	    <input type="text" id="keyPad_UserInput" class="keyPad_TextBox" maxlength="10" readonly/></input>
+		        <div class="oscSpacer2"></div>
+
+		        <!--MEM-->
+		        <div class="keys_ToRight">
+					<button id="keyPad_btnMemPlus" class="keyPad_btnMemOp">M+</button>
+                    <button id="keyPad_btnMemMinus" class="keyPad_btnMemOp">M-</button>
+ 		        </div>
+ 		        <input type="text" id="keyPad_Mem" class="keyPad_TextBox" readonly /></input> 
+                <div class="oscSpacer5"></div>
+                <div class="oscSpacer5"></div>
+
+		        <!--1st ROW-->
+		        <div class="keys_ToRight">
+			        <button id="keyPad_btnPlus" class="keyPad_btnBinaryOp">+</button>
+			        <button id="keyPad_btnMinus" class="keyPad_btnBinaryOp">-</button>
+			        <button id="keyPad_btnMult" class="keyPad_btnBinaryOp">*</button>
+			        <button id="keyPad_btnDiv" class="keyPad_btnBinaryOp">&#247</button>	
+		        </div>
+		        <button id="keyPad_btn7" class="keyPad_btnNumeric">7</button>
+        	    <button id="keyPad_btn8" class="keyPad_btnNumeric">8</button>
+        	    <button id="keyPad_btn9" class="keyPad_btnNumeric">9</button>
+                <div class="oscSpacer2"></div>
+		
+		        <!--2nd ROW-->	
+		        <div class="keys_ToRight">
+                    <button id="keyPad_btnPercent" class="keyPad_btnBinaryOp">%</button>
+			        <button id="keyPad_btnInverse" class="keyPad_btnUnaryOp">1/x</button>
+			        <button id="keyPad_btnSquare" class="keyPad_btnUnaryOp">x<sup>2</sup></button>
+			        <button id="keyPad_btnSquareRoot" class="keyPad_btnUnaryOp">&#8730</button>
+		        </div>
+        	    <button id="keyPad_btn4" class="keyPad_btnNumeric">4</button>
+        	    <button id="keyPad_btn5" class="keyPad_btnNumeric">5</button>
+        	    <button id="keyPad_btn6" class="keyPad_btnNumeric">6</button>
+                <div class="oscSpacer2"></div>
+ 
+		        <!--3rd ROW-->	  
+		        <div class="keys_ToRight">
+                   
+                    <button id="keyPad_btnExp" class="keyPad_btnUnaryOp">e<sup>x</sup></button>
+                    <button id="keyPad_btnYpowX" class="keyPad_btnBinaryOp">y<sup>x</sup></button>
+			        <button id="keyPad_btnLn" class="keyPad_btnUnaryOp">ln</button>
+                    <button id="keyPad_btnLg" class="keyPad_btnUnaryOp">lg</button>
+		        </div>     
+		        <button id="keyPad_btn1" class="keyPad_btnNumeric">1</button>
+        	    <button id="keyPad_btn2" class="keyPad_btnNumeric">2</button>
+        	    <button id="keyPad_btn3" class="keyPad_btnNumeric">3</button>
+		        <div class="oscSpacer2"></div>
+
+		        <!--4th ROW-->
+		        <div class="keys_ToRight">
+                    <button id="keyPad_btnPi" class="keyPad_btnConst">&#960</button>
+			        <button id="keyPad_btnSin" class="keyPad_btnUnaryOp">sin</button>
+			        <button id="keyPad_btnCosin" class="keyPad_btnUnaryOp">cos</button>
+			        <button id="keyPad_btnTg" class="keyPad_btnUnaryOp">tan</button>
+
+		        </div>
+                <button id="keyPad_btn0" class="keyPad_btnNumeric">0</button>
+		        <button id="keyPad_btnDot" class="keyPad_btnNumeric">.</button>
+                <div class="oscSpacer3"></div>
+
+                <!-- ---------EXTRA ROWS---------  -->
+                <!--E-ROW 1-->
+	            <div class = "oscExtPanel">
+ 		            <div class="keys_ToRight">
+                        <button id="keyPad_btnPiDiv2" class="keyPad_btnConst">&#960;/2</button>
+			            <button id="keyPad_btnAsin" class="keyPad_btnUnaryOp">asin</button>
+			            <button id="keyPad_btnAcos" class="keyPad_btnUnaryOp">acos</button>
+                        <button id="keyPad_btnAtan" class="keyPad_btnUnaryOp">atan</button>
+		            </div> 
+                    <button id="keyPad_btnPiDiv3" class="keyPad_btnConst">&#960;/3</button>
+                    <button id="keyPad_btnPiDiv4" class="keyPad_btnConst">&#960;/4</button>
+                    <button id="keyPad_btnPiDiv6" class="keyPad_btnConst">&#960;/6</button>
+                    <div class="oscSpacer2"></div>
+
+                    <!--E-ROW 2-->
+ 		            <div class="keys_ToRight">
+                        <button id="keyPad_btnE" class="keyPad_btnConst">e</button>
+                         <button id="keyPad_btnSinH" class="keyPad_btnUnaryOp">sinh</button>
+			            <button id="keyPad_btnCosinH" class="keyPad_btnUnaryOp">cosh</button>
+			            <button id="keyPad_btnTgH" class="keyPad_btnUnaryOp">tanh</button>
+		            </div> 
+                    <button id="keyPad_btnInvE" class="keyPad_btnConst">1/e</button>
+                    <button id="keyPad_btnLn10" class="keyPad_btnConst">ln(10)</button>
+                    <button id="keyPad_btnLgE" class="keyPad_btnConst">lg(e)</button>
+                    <div class="oscSpacer2"></div>
+   
+                     <!--E-ROW 3-->
+ 		            <div class="keys_ToRight">
+                        <button id="keyPad_btnSec" class="keyPad_btnUnaryOp">sec</button>
+                        <button id="keyPad_btnCosec" class="keyPad_btnUnaryOp">csc</button>
+                        <button id="keyPad_btnSecH" class="keyPad_btnUnaryOp">sech</button>
+        	            <button id="keyPad_btnCosecH" class="keyPad_btnUnaryOp">csch</button>
+		            </div> 
+			        <button id="keyPad_btnSigma" class="keyPad_btnConst">&#963</button>
+                    <button id="keyPad_btnSigma3" class="keyPad_btnConst">3&#963</button>
+                    <button id="keyPad_btnSigma6" class="keyPad_btnConst">6&#963</button>
+                    <div class="oscSpacer2"></div>
+
+                     <!--E-ROW 4-->
+ 		            <div class="keys_ToRight">
+			            <button id="keyPad_btnCube" class="keyPad_btnUnaryOp">x<sup>3</sup></button>
+			            <button id="keyPad_btnCubeRoot" class="keyPad_btnUnaryOp">&#8731</button>
+                        <button id="keyPad_btnOnePlusX" class="keyPad_btnUnaryOp">1+x</button>
+        	            <button id="keyPad_btnOneMinusX" class="keyPad_btnUnaryOp">1-x</button>
+		            </div> 
+                    <button id="keyPad_btnSqrt2" class="keyPad_btnConst">&#8730;2</button>
+                    <button id="keyPad_btnSqrt3" class="keyPad_btnConst">&#8730;3</button>
+			        <button id="keyPad_btnCubeRoot2" class="keyPad_btnConst">&#8731;2</button>
+                    <div class="oscSpacer2"></div>
+
+                </div>
+                <div class="oscSpacer3"></div>
+
+		        <!--5th ROW-->
+		        <div class="keys_ToRight">
+			        <button id="keyPad_btnInverseSign" class="keyPad_btnUnaryOp">+/-</button>
+			        <button id="keyPad_btnEnter" class="keyPad_btnCommand">=</button>
+		        </div>  
+        	    <button id="keyPad_btnBack" class="keyPad_btnCommand">&#8678</button>
+		        <button id="keyPad_btnClr" class="keyPad_btnCommand">C</button>
+                <button id="keyPad_btnAllClr" class="keyPad_btnCommand">AC</button>
+		        <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            
+            <article>
+     	    
+            </article>
+        </div> 
+
+  	  
+   </div>
+ </body>
+</html>

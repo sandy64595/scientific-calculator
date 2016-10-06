@@ -1,0 +1,299 @@
+/******************************************************************************
+Project          :  Scientific Calculator
+Module           :  CSS 3
+Description      :  Implements HTML 5 / CSS 3 advanced features
+******************************************************************************
+Author           :  Alexander Bell
+Copyright        :  2010 Infosoft International Inc
+Date Created     :  11/20/2010
+Last Modified    :  12/01/2010
+******************************************************************************
+DISCLAIMER: This Application is provide on AS IS basis without any warranty
+You can use it at your sole risk.
+******************************************************************************
+TERMS OF USE     :  This module is copyrighted. You can use it provided that
+                 :  you keep the original copyright note.
+******************************************************************************/
+
+body {
+    margin: 0;
+    padding: 0;
+	font-family: Arial, Calibri, Verdana, Tahoma, Times New Roman ;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #eaeaea;
+} 
+
+/* CENTER COLUMN */
+.oscCenterColumn {
+    width: 480px;
+    padding: 10px 0px 0px 0px;
+    margin: 10px auto;
+	text-align: left;
+}
+
+/* MAIN DIV W/ALL CONTENTS */
+.oscMain {
+ 	padding:10px;
+ 	
+ 	/* make rounded corners */
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+       	
+    /* add shadows */
+    -moz-box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+     	
+    /* add gradient */
+    /* WebKit */
+    background: -webkit-gradient(linear, left top, left bottom, from(#404040), to(#707070));
+    /* Mozilla/Gecko */
+    background: -moz-linear-gradient(top, #404040, #707070);
+}
+ 
+/* NEW TAGS ADDED IN HTML 5 */
+header, footer, nav { display:block }
+
+.oscTitle {
+    float:right;
+    margin:0px 0px 0px 0px; 
+    font-size: 24px;
+    font-weight:lighter;
+    color: #dadada;
+    vertical-align:middle;
+}
+
+.oscModel {
+    text-align:center;
+    height:30px;
+    line-height:30px;
+    background-color: #303030;
+    vertical-align:middle;
+}
+.oscModel {
+    width: 150px;
+    margin:0px 0px 0px 0px;
+    font-size: 24px;
+    font-weight:bold;
+    color: yellow;
+    /* make rounded corners */
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+ 
+/* NAV */
+button.oscNav 
+{
+    float:left;
+    height:30px;
+    line-height:30px;
+    vertical-align:middle;
+    font-size: 14px;
+    font-family: Arial, Tahoma, Verdana, Calibri;
+    color: #bababa;
+   
+    margin: 0px 0px 0px 3px;
+    padding: 0px 5px 0px 5px;
+    border: 1px solid olive;
+  
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;  
+
+    background: #505050;
+    background: -moz-linear-gradient(top, #909090, #505050 15px, #303030 15px, #202020);
+    background: -webkit-gradient(linear, left top, left bottom, from(#909090),
+    color-stop(0.5, #505050), color-stop(0.5, #303030), to(#202020));
+    
+    cursor: pointer;
+    cursor: hand;
+}
+a { text-decoration:none;}
+button.oscNav:active {	border: solid 2px #dadada; }
+button.oscNav:hover  {
+    background: #454545;
+    background: -moz-linear-gradient(top, #505050, #202020 20px, #303030 20px, #909090);
+    background: -webkit-gradient(linear, left top, left bottom, from(##505050),
+    color-stop(0.5, #202020), color-stop(0.5, #303030), to(##909090));
+}
+
+/* EXTENDER CONTROL */
+.oscExtControl, .oscStackControl
+{
+    float:right;
+    margin:0px 0px 0px 5px;
+    width:60px;
+    height:30px;
+    line-height:30px;
+    vertical-align:middle;
+    text-align:center;
+    background-color: olive;
+    color: #dadada;
+    font-size: 22px;
+    font-weight:bold;
+    cursor: pointer;
+    cursor: hand;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* stack register content */
+.oscStackRegister
+{
+    position:absolute;
+    width:310px;
+    height:30px;
+    line-height:30px;
+    vertical-align:middle;
+    
+    margin:5px 0px 0px 10px;
+    font-size: 22px;
+    font-weight:normal;
+    text-align:center;
+    color:#eaeaea;
+    background-color:Olive;
+
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    
+    filter:alpha(opacity=90);
+	-moz-opacity:0.9;
+	opacity: 0.9;
+	
+	z-index:20;
+	cursor: pointer;
+    cursor: hand;
+} 
+
+/* extended functions area */
+.oscExtPanel
+{
+    margin:0px;  
+    padding: 5px 5px 5px 5px; 
+    display:block; 
+    background-color:#404040; 
+    border: solid 1px Olive;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* DIV CONTAINING KEYS AND INPUT/MEM BOXES */
+div#keyPad { width: 100%; }
+
+/* KEYS RIGHT ALIGN */
+.keys_ToRight { float:right;	}
+
+/******** CONTROLS: KEYS, INPUT/MEM TEXT BOXES *********/
+div#keyPad input, div#keyPad button 
+{
+    height: 40px;
+    vertical-align:middle;
+    line-height:40px;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid olive;
+    font-family: Arial, Tahoma, Verdana, Calibri;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+	
+}
+div#keyPad button {
+    width: 60px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    cursor: hand;
+    color: #dadada;
+    font-weight:bold;
+    /* add gradient using stop-color property: not working in IE<9 */
+    background:#404040;
+    background: -moz-linear-gradient(top, #dadada, #505050 20px, #303030 20px, #202020);
+    background: -webkit-gradient(linear, left top, left bottom, from(#dadada),
+    color-stop(0.5, #505050), color-stop(0.5, #303030), to(#202020));
+}
+div#keyPad button:active {	border: solid 2px #707070; }
+div#keyPad button:hover  {
+    background: #454545;
+    background: -moz-linear-gradient(top, #505050, #202020 20px, #303030 20px, #909090);
+    background: -webkit-gradient(linear, left top, left bottom, from(##505050),
+    color-stop(0.5, #202020), color-stop(0.5, #303030), to(##909090));
+}
+
+/* INPUT/MEM TEXT BOXES*/
+div#keyPad input {
+    width: 330px;
+    text-align: left;
+    text-indent:10px;
+    font-size: 24px;
+    color: #202020;
+    /* add gradient */
+    /* WebKit */
+    background: -webkit-gradient(linear, left top, right top from(#ffffcc), to(#ffffff));
+    /* Mozilla/Gecko  */
+    background: -moz-linear-gradient(left top, #ffffcc, #ffffff);
+}
+div#keyPad input#keyPad_Mem {color: #909090;}
+	  
+/* ENTER BUTTON: QUAD WIDTH + 14 */
+div#keyPad button#keyPad_btnEnter { width:188px; font-size: 20px; color:Yellow;}
+	
+/* INPUT/MEM KEYS*/
+div#keyPad .keyPad_btnMemOp
+{  font-size: 20px;  color: Olive;}
+
+/* ZERO BUTTON: DOUBLE WIDTH + 4 */
+div#keyPad button#keyPad_btn0
+{  width: 125px;  }
+
+/* BACKSPACE/CLEAR INPUT KEYS*/
+div#keyPad button#keyPad_btnBack,
+div#keyPad button#keyPad_btnClr,
+div#keyPad button#keyPad_btnAllClr
+{
+	border-color:red;
+	color:red;
+}
+div#keyPad button#keyPad_btnBack {font-size: 18px;}
+	
+/* SPECIAL FORMATTING FOR SUPER-SCRIPT KEYS */
+div#keyPad button#keyPad_btnSquare,
+div#keyPad button#keyPad_btnCube,
+div#keyPad button#keyPad_btnExp,
+div#keyPad keyPad_btnYpowX
+{ font-size: 16px; }
+
+/* CLEAR BOTH */
+.clear {clear:both;}
+
+.oscDisclaimer  
+{
+    margin: 5px 0px 5px 0px;
+    color: #adadad;
+    font-weight: normal;
+    font-size: 10pt;
+    text-align:center;
+}
+
+.oscNotice {
+    margin-top:5px;     
+    text-align:center;
+    font-size: 12px;
+    color: #606060;
+}
+
+.oscSpacer2, .oscSpacer3, .oscSpacer5  {clear:both; width:100%;}
+.oscSpacer2 {height:2px;}
+.oscSpacer3 {height:3px;}
+.oscSpacer5 {height:5px;}
+
+
+/* COMPATIBILITY W/OLD IE<9 */
+#ie { background-color: #303030; }
+/*************************************************/
